@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOKUMENTAS</title>
+    <title>JS DOM testas</title>
+    
 </head>
 <body>
+    <h2 id="first">Pirmas tagas</h2>
+    <h2 id="second">Antras tagas</h2>
+    <Button onclick="writeNumber()">Mygtukas</Button>
+    <h3 id="array"></h3>
+    <button onclick="numberToArray()">Mygtukas 2uzd.</button>
+    <ul id="africa"></ul>
+    <input type="number" id="number" name="number">
+    <input type="number" id="number" name="number"><br>
+    <h5></h5>
+    <button>+</button>
+    <button>-</button>
+    <ul></ul>              
     
+
+    <script>
+
+        // ---------- 1 UZDUOTIS
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }   
+
+        function writeNumber() {
+            let firstNumber = rand(1, 6);
+            let secondNumber = rand(1, 6);
+            if (firstNumber === secondNumber) {
+                document.getElementById("first").style.color = "red";
+                document.getElementById("first").style.Text = firstNumber;
+                document.getElementById("second").style.color = "red";
+                document.getElementById("second").innerText =   secondNumber; 
+            }
+            document.getElementById("first").innerText =  firstNumber;
+            document.getElementById("second").innerText = secondNumber;  
+        }
+
+        //----------- 2 Uzduotis
+        let newA2 = [];
+        function numberToArray() {
+            newA2.push(rand(1, 10));
+            console.log(newA2);
+            let sum = 0;
+            for (let i = 0; i < newA2.length; i++) {
+                 sum += newA2[i];
+            } 
+            document.getElementById("array").innerText = sum; 
+        }
+
+        //----------- 3 Uzduotis
+        const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
+        
+        for(let i = 0; i < array.length; i++) {
+        if (!array[i] || array[i].length === "") {
+            return null;
+        } else 
+            document.createElement('li', array[i]);
+           
+    }
+
+        //----------- 4 Uzduotis
+
+
+
+
+        //----------- 5 Uzduotis
+    </script>
+
+
+
+    <script src="home.js" type="module" defer></script>
+    <script src="rand.js"></script>
+    <script src="writeNumber.js"></script>
 </body>
 </html>
