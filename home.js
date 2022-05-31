@@ -4,9 +4,10 @@ import { africa } from "./africaData";
 import { mamaAfrica } from "./mamaAfrica";
 
 
-rand(1, 10);
-writeNumber();
+
+// rand(1, 10);
+// writeNumber();
 
 
-africa();
-mamaAfrica('#africa', africa);
+// africa();
+// mamaAfrica('#africa', africa);

@@ -10,7 +10,7 @@
 <body>
     <h2 id="first">Pirmas tagas</h2>
     <h2 id="second">Antras tagas</h2>
-    <Button onclick="writeNumber()">Mygtukas</Button>
+    <Button onclick="writeNumber">Mygtukas</Button>
     <h3 id="array"></h3>
     <button onclick="numberToArray()">Mygtukas 2uzd.</button>
     <ul id="africa"></ul>
@@ -26,24 +26,28 @@
 
         // ---------- 1 UZDUOTIS
         function rand(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        }   
-
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+        }  
         function writeNumber() {
-            let firstNumber = rand(1, 6);
-            let secondNumber = rand(1, 6);
-            if (firstNumber === secondNumber) {
-                document.getElementById("first").style.color = "red";
-                document.getElementById("first").style.Text = firstNumber;
-                document.getElementById("second").style.color = "red";
-                document.getElementById("second").innerText =   secondNumber; 
-            }
-            document.getElementById("first").innerText =  firstNumber;
-            document.getElementById("second").innerText = secondNumber;  
+        let firstNumber = rand(1, 6);
+        let secondNumber = rand(1, 6);
+        if (firstNumber === secondNumber) {
+            document.getElementById("first").style.color = "red";
+            document.getElementById("first").innerText = firstNumber;
+            document.getElementById("second").style.color = "red";
+            document.getElementById("second").innerText =  secondNumber;
+        } else {
+            document.getElementById("first").style.color = "black";
+            document.getElementById("first").innerText = firstNumber;
+            document.getElementById("second").style.color = "black";
+            document.getElementById("second").innerText =  secondNumber;
+        }
         }
 
+        const el = document.getElementById("pirmas");
+        el.addEventListener("click", writeNumber);
         //----------- 2 Uzduotis
         let newA2 = [];
         function numberToArray() {
@@ -73,11 +77,11 @@
 
 
         //----------- 5 Uzduotis
-    </script>
+    </script> -->
 
 
 
-    <script src="home.js" type="module" defer></script>
+    <!-- <script src="home.js" type="module" defer></script>
     <script src="rand.js"></script>
     <script src="writeNumber.js"></script>
 </body>
